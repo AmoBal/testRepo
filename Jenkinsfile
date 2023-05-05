@@ -13,7 +13,7 @@ pipeline {
       steps{
         sh '''
           pwd
-          echo "This is the first stage: TEST"
+          echo "This is the second stage: TEST"
         '''
       }
     }
@@ -21,7 +21,7 @@ pipeline {
       steps{
         sh '''
           pwd
-          echo "This is the first stage: DEPLOY"
+          echo "This is the third stage: DEPLOY"
         '''
       }
     }
