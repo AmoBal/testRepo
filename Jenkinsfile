@@ -1,7 +1,8 @@
 pipeline {
   agent any 
   parameters{
-    choice(name: 'Target_env',choices:['test','prod'],description:'where to deploy')
+    string(name: 'Target_env', description: 'Target environment')
+//     choice(name: 'Target_env',choices:['test','prod'],description:'where to deploy')
   }
   environment{
     DEPLOY_TO="${Target_env}"
