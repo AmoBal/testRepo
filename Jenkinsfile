@@ -1,10 +1,10 @@
 pipeline {
   agent any 
   parameters{
-    choice(name:'Target_env',choices:['test','prod'],description:'where to deploy')
+    choice(name: 'Target_env',choices:['test','prod'],description:'where to deploy')
   }
   environment{
-    DEPLOY_TO="$Target_env"
+    DEPLOY_TO="$(Target_env)"
   }
   
   stages{
