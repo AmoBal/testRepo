@@ -10,7 +10,7 @@ pipeline {
   stages{
     stage('TEST'){
       when{
-        environment name:'DEPLOY_TO', value="test"
+        environment name:'DEPLOY_TO', value='test'
       }
       steps{
         sh '''
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('PROD'){
       when{
-        environment name:'DEPLOY_TO', value="prod"
+        environment name:'DEPLOY_TO', value='prod'
       }
       steps{
         sh '''
