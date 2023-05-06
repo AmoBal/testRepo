@@ -10,11 +10,23 @@ pipeline {
       }
     }
     stage('TEST'){
-      steps{
-        sh '''
-          pwd
-          echo "This is the second stage: TEST"
-        '''
+      parallel{
+        stage('TEST1'){
+          steps{
+            sh '''
+            pwd
+            echo "This is the second stage: TEST1"
+          '''
+          }
+        }
+        stage('TEST2'){
+          steps{
+            sh '''
+            pwd
+            echo "This is the second stage: TEST2"
+          '''
+          }
+        }
       }
     }
     stage('DEPLOY'){
