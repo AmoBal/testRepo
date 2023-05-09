@@ -11,6 +11,7 @@ pipeline {
     stage('TEST'){
       when{
         environment name= 'DEPLOY_TO',value= 'test'
+      }
       steps{
         sh '''
           sleep 5
