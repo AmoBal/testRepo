@@ -5,13 +5,13 @@ pipeline {
 //     choice(name: 'Target_env',choices:['test','prod'],description:'where to deploy')
   }
   environment{
-    DEPLOY_TO = "$Target_env"
+    DEPLOY_TO = "${Target_env}"
   }
   stages{
     stage('TEST'){
       when{
         environment{ 
-          name: "DEPLOY_TO", value= 'test'
+          name: 'DEPLOY_TO', value= 'test'
         }
       }
       steps{
