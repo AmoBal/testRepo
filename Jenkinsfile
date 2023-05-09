@@ -30,6 +30,11 @@ pipeline {
          '''
       }
     }
+    post{
+      always{
+       echo "This is a Post Build action" 
+      }
+    }
   }
 }
     
