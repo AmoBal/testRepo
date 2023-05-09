@@ -21,7 +21,7 @@ pipeline {
     }
     stage('PROD'){
       when{
-        environment name:'DEPLOY_TO', value='prod'
+        environment name:'DEPLOY_TO', value:'prod'
       }
       steps{
         sh '''
