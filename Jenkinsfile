@@ -11,7 +11,8 @@ pipeline {
     stage('TEST'){
       when{
         environment{ 
-          name= 'DEPLOY_TO', value= 'test'
+          name= 'DEPLOY_TO' 
+          value= 'test'
         }
       }
       steps{
